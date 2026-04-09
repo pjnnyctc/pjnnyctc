@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Padmamala JNNYCTC | পদ্মমালা জওহরলাল নেহরু জাতীয় যুব কম্পিউটার প্রশিক্ষণ কেন্দ্র</title>
+  <!-- Font Awesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+    }
+    body {
+      background: linear-gradient(145deg, #f9e7d2 0%, #ffffff 100%);
+      color: #1e2a3e;
+    }
+    /* Header with Logo + Animated Title */
+    .centre-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 15px 30px;
+      background: linear-gradient(115deg, #0000dd 0%, #270082 100%);
+      border-bottom: 4px solid #d4ff00;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffaa33;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .centre-name {
+      text-align: left;
+    }
+    .hero-title {
+      background: linear-gradient(135deg, #ffffff, #eeff00, #ffffff, #f6ff00);
+      background-size: 300% 300%;
+      animation: gradientShift 5s ease infinite;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .sub-title {
+      font-size: 0.85rem;
+      color: #ffffff;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+    .helpline-badge {
+      background: #ffaa33;
+      padding: 8px 20px;
+      border-radius: 40px;
+      color: #000000;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    /* navigation */
+    .nav-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background: #ff0000;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .nav-tabs li {
+      margin: 0;
+    }
+    .nav-tabs button {
+      background: transparent;
+      border: none;
+      padding: 14px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f0f0f0;
+      cursor: pointer;
+      transition: 0.3s;
+      border-bottom: 3px solid transparent;
+    }
+    .nav-tabs button.active, .nav-tabs button:hover {
+      background-color: #d4ff00;
+      border-bottom-color: #fff2cc;
+      color: #1e2a3e;
+    }
+    /* sections */
+    .section {
+      display: none;
+      padding: 40px 20px;
+      animation: fadeSlide 0.4s ease;
+    }
+    .section.active-section {
+      display: block;
+    }
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(15px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2b3b4e;
+      text-align: center;
+      margin-bottom: 30px;
+      border-left: 8px solid #ffaa33;
+      padding-left: 20px;
+      display: inline-block;
+      width: auto;
+      background: rgba(255,255,200,0.3);
+      border-radius: 0 30px 30px 0;
+      animation: glowPulse 2s infinite;
+    }
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 0px #ffaa33; }
+      50% { text-shadow: 0 0 8px #ffaa33; }
+      100% { text-shadow: 0 0 0px #ffaa33; }
+    }
+    /* FULL WIDTH IMAGE SLIDER */
+    .slider-container {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      border-top: 3px solid #ffaa33;
+      border-bottom: 3px solid #ffaa33;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+    }
+    .slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      max-height: 600px;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: #ffaa33;
+      font-size: 28px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      user-select: none;
+      transition: 0.2s;
+      z-index: 10;
+    }
+    .prev:hover, .next:hover { background: #ffaa33; color: #1f2e3c; }
+    .prev { left: 15px; }
+    .next { right: 15px; }
+    /* cards */
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .card {
+      background: linear-gradient(135deg, #ffffffdd, #fff5e6);
+      backdrop-filter: blur(2px);
+      border-radius: 24px;
+      width: 280px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      transition: 0.3s;
+      border-bottom: 5px solid #ffaa33;
+    }
+    .card i {
+      font-size: 48px;
+      color: #ff0000;
+    }
+    .btn {
+      background: #eeff00;
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 15px;
+      display: inline-block;
+      transition: 0.2s;
+    }
+    .btn:hover { background: #ffaa33; color: #1e2a3e; transform: scale(1.02);}
+    .btn-orange {
+      background: #ff8c42;
+    }
+    .form-container {
+      background: rgba(255,250,235,0.95);
+      padding: 30px;
+      border-radius: 28px;
+      max-width: 550px;
+      margin: 20px auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      border: 1px solid #ffcc88;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 60px;
+      border: 1px solid #ffb366;
+      background: #fffef7;
+    }
+    .winner-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .winner-card {
+      background: linear-gradient(145deg, #fff8f0, #ffe8d4);
+      border-radius: 30px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      border-top: 6px solid #ffaa33;
+    }
+    .winner-card img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffaa33;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #ffaa66;
+      padding: 8px 0;
+      flex-wrap: wrap;
+    }
+    .error {
+      color: #c0392b;
+      background: #ffe6e6;
+      padding: 10px;
+      border-radius: 50px;
+    }
+    /* Review Section */
+    .review-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .review-card {
+      background: white;
+      border-radius: 28px;
+      width: 320px;
+      padding: 20px;
+      box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: float 3s ease-in-out infinite;
+    }
+    .review-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 35px rgba(0,0,0,0.2);
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0px); }
+    }
+    .review-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 15px;
+      border: 3px solid #ffaa33;
+    }
+    .review-video {
+      width: 100%;
+      border-radius: 20px;
+      margin: 10px 0;
+    }
+    .review-text {
+      font-style: italic;
+      color: #2c3e50;
+      margin-top: 10px;
+    }
+    /* News & Event section */
+    .news-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .news-card {
+      background: rgba(255,250,235,0.95);
+      border-radius: 28px;
+      width: 350px;
+      padding: 20px;
+      border-left: 8px solid #ffaa33;
+      transition: 0.3s;
+    }
+    .news-card h3 {
+      color: #ff0000;
+    }
+    /* Footer social links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+    }
+    .social-links a {
+      color: #eeff00;
+      font-size: 28px;
+      transition: 0.3s;
+    }
+    .social-links a:hover {
+      color: white;
+      transform: scale(1.2);
+    }
+    footer {
+      background: #0400ff;
+      color: #eeff00;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+    .image-note {
+      background: #ffffff;
+      color: #000000;
+      padding: 5px;
+      text-align: center;
+      font-size: 0.8rem;
+      border-radius: 30px;
+      margin: 10px auto;
+      width: fit-content;
+    }
+    /* Passport photo style for student registration */
+    .passport-photo {
+      width: 113px;
+      height: 132px;
+      object-fit: cover;
+      border: 3px solid #ffaa33;
+      border-radius: 4px;
+      background: #fff;
+      display: block;
+      margin: 0 auto 15px;
+    }
+    /* Champions Slider (single slide carousel) */
+    .champions-slider {
+      position: relative;
+      max-width: 800px;
+      margin: 30px auto;
+      background: rgba(255,250,235,0.9);
+      border-radius: 40px;
+      padding: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+    .champ-slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .champ-slide {
+      min-width: 100%;
+      text-align: center;
+    }
+    .champ-slide img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #ffaa33;
+      margin-bottom: 15px;
+    }
+    .champ-slide h3 {
+      color: #ff0000;
+      margin: 10px 0;
+    }
+    .champ-slide p {
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+    .champ-prev, .champ-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: #ffaa33;
+      font-size: 24px;
+      padding: 8px 14px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+    .champ-prev { left: 10px; }
+    .champ-next { right: 10px; }
+    .champ-prev:hover, .champ-next:hover {
+      background: #ffaa33;
+      color: #000;
+    }
+    @media (max-width: 700px) {
+      .centre-header { flex-direction: column; text-align: center; gap: 15px; }
+      .logo-area { justify-content: center; }
+      .hero-title { font-size: 1.4rem; text-align: center; }
+      .slide img { max-height: 300px; }
+      .section-title { font-size: 1.5rem; }
+      .passport-photo {
+        width: 90px;
+        height: 105px;
+      }
+      .champ-slide img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER WITH CENTRE LOGO -->
+<div class="centre-header">
+  <div class="logo-area">
+    <img class="logo-img" src="logo.png" alt="Centre Logo">
+    <div class="centre-name">
+      <div class="hero-title"> পদ্মমালা জওহরলাল নেহরু জাতীয় যুব কম্পিউটার প্রশিক্ষণ কেন্দ্র </div>
+      <div class="sub-title"> An Authorized Training Centre of "Jawaharlal Nehru National Youth Computer Training Centre (JNNYCTC)" A unit of 'National Council of Educational Foundation'</div>
+    </div>
+  </div>
+  <div class="helpline-badge">
+    <i class="fas fa-phone"></i> +91 7407663407
+  </div>
+</div>
+
+<!-- Tabs -->
+<ul class="nav-tabs">
+  <li><button class="tab-btn active" data-tab="home">🏠 Home</button></li>
+  <li><button class="tab-btn" data-tab="about">📖 About Us</button></li>
+  <li><button class="tab-btn" data-tab="course">📚 Course</button></li>
+  <li><button class="tab-btn" data-tab="studentzone">👩‍🎓 Students Zone</button></li>
+  <li><button class="tab-btn" data-tab="news">📰 News & Event</button></li>
+  <li><button class="tab-btn" data-tab="contact">📞 Contact Us</button></li>
+</ul>
+
+<!-- ========================= HOME SECTION ========================= -->
+<section id="home" class="section active-section">
+  <!-- MAIN FULL WIDTH SLIDER -->
+  <div class="slider-container">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="1.png" alt="Computer Lab"></div>
+      <div class="slide"><img src="2.png" alt="Students Working"></div>
+      <div class="slide"><img src="3.png" alt="Award Ceremony"></div>
+      <div class="slide"><img src="4.png" alt="Typing Competition"></div>
+      <div class="slide"><img src="5.png" alt="Teacher"></div>
+    </div>
+    <a class="prev">❮</a>
+    <a class="next">❯</a>
+  </div>
+  
+  <!-- SECOND SLIDER: STUDENT ACHIEVEMENTS -->
+  <div style="margin: 40px 0 20px;">
+    <h2 class="section-title" style="display: block; text-align: center; border-left: none; animation: glowPulse 2s infinite;">✨ PADMAMALA JNNYCTC Students Achievements ✨</h2>
+    <div class="slider-container" style="margin-top: 20px;">
+      <div class="slides" id="achievementSlides">
+        <div class="slide"><img src="6.png" alt="Achievement 1"></div>
+        <div class="slide"><img src="7.png" alt="Achievement 2"></div>
+        <div class="slide"><img src="8.png" alt="Achievement 3"></div>
+      </div>
+      <a class="prevAchiev">❮</a>
+      <a class="nextAchiev">❯</a>
+    </div>
+  </div>
+
+  <!-- OUR CHAMPIONS SLIDER (MOVED TO HOME) -->
+  <div style="margin: 50px 0 30px;">
+    <h2 class="section-title" style="display: block; text-align: center; border-left: none;">🏆 Our Champions 🏆</h2>
+    <div class="champions-slider">
+      <div class="champ-slides" id="champSlides">
+        <!-- winners will be injected dynamically -->
+      </div>
+      <a class="champ-prev">❮</a>
+      <a class="champ-next">❯</a>
+    </div>
+  </div>
+
+  <!-- STUDENT REVIEWS SECTION -->
+  <div class="container">
+    <h2 class="section-title" style="display: block; text-align: center; border-left: none;">🌟 Students Reviews 🌟</h2>
+    <div class="review-grid" id="reviewsContainer">
+      <div class="review-card">
+        <iframe class="review-video" width="100%" height="160" src="1.mp4" title="Student Review Video" frameborder="0" allowfullscreen></iframe>
+        <h3>Video Review by Sulekha Shaikh</h3>
+        <p class="review-text">"Watch how our student shares his success story after completing Advance Diploma in Computer Application (ADCA)."</p>
+      </div>
+      <div class="review-card">
+        <iframe class="review-video" width="100%" height="160" src="2.mp4" title="Student Review Video" frameborder="0" allowfullscreen></iframe>
+        <h3>Video Review by Sakir Mandal</h3>
+        <p class="review-text">"Watch how our student shares his success story after completing Advance Diploma in Computer Application (ADCA)."</p>
+      </div>
+      <div class="review-card">
+        <iframe class="review-video" width="100%" height="160" src="3.mp4" title="Student Review Video" frameborder="0" allowfullscreen></iframe>
+        <h3>Video Review by Nafij Sekh</h3>
+        <p class="review-text">"Watch how our student shares his success story after completing Advance Diploma in Computer Application (ADCA)."</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Action Cards -->
+  <div class="container">
+    <div class="card-grid">
+      <div class="card"><i class="fas fa-id-card"></i><h3>Check Registration</h3><p>View admission details</p><button class="btn checkRegBtn">Check Now</button></div>
+      <div class="card"><i class="fas fa-trophy"></i><h3>Scholarship Exam</h3><p>Win upto 75% off</p><button class="btn scholarshipBtn">Start Exam</button></div>
+      <div class="card"><i class="fas fa-medal"></i><h3>🏆 Winners 2025</h3><p>Typing & Event Champs</p><button class="btn winnerBtn">View Winners</button></div>
+    </div>
+  </div>
+  <div class="image-note">
+    <i class="fas fa-trophy"></i> <strong>An Authorized Training Centre of</strong> JNNYCTC is an autonomous organization registered under the Indian public trust act. A unit of 'National Council of Educational Foundation' (Unique ID.- IV-1903-02385/17) and  N.CT. New Delhi Govt. of India. And the trust is also certified by  ISO 9001 : 2015 org (Certificate No.-IN95882A). The institute certificate is also registered under C.R.,Ministry of Human Resource Development Govt. of  India. And  Affiliated member of Planning Commission Govt. of India. The organization also certified by Department of Labour, Government of National Capital Territory of Delhi (Certificate No.- IN-DL79720045260935P)
+  </div>
+</section>
+
+<!-- ========================= ABOUT US ========================= -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-title">Padmamala Jawaharlal Nehru National Youth Computer Training Centre</div>
+    <div style="background: rgba(255,245,225,0.9); border-radius: 30px; padding: 30px; text-align: center; backdrop-filter: blur(2px);">
+      <p>An Authorized Training Centre of "JNNYCTC" is an autonomous organization registered under the Indian public trust act. A unit of 'National Council of Educational Foundation' (Unique ID.- IV-1903-02385/17) and  N.CT. New Delhi Govt. of India. And the trust is also certified by  ISO 9001 : 2015 org (Certificate No.-IN95882A). The institute certificate is also registered under C.R.,Ministry of Human Resource Development Govt. of  India. And  Affiliated member of Planning Commission Govt. of India. The organization also certified by Department of Labour, Government of National Capital Territory of Delhi (Certificate No.- IN-DL79720045260935P)</p>
+      <p><strong>🏅 ISO Certified | 🎓 Govt. Recognized | 💼 Job Oriented Course</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= COURSE SECTION ========================= -->
+<section id="course" class="section">
+  <div class="container">
+    <div class="section-title">📌 Our Courses</div>
+    <div class="card-grid">
+      <div class="card"><i class="fas fa-laptop-code"></i><h3>Diploma in Web Designing</h3><p>HTML, CSS, JS, PHP</p></div>
+      <div class="card"><i class="fas fa-chart-line"></i><h3>Digital Marketing</h3><p>SEO, Social Media, Ads</p></div>
+      <div class="card"><i class="fas fa-keyboard"></i><h3>Typing Course</h3><p>English & Bengali Typing</p></div>
+      <div class="card"><i class="fas fa-calculator"></i><h3>Tally + GST</h3><p>Accounting Expert</p></div>
+      <div class="card"><i class="fas fa-paint-brush"></i><h3>Graphic Design</h3><p>Photoshop</p></div>
+      <div class="card"><i class="fas fa-code"></i><h3>Basic Computer Course</h3><p>CTT, DDE, COA</p></div>
+      <div class="card"><i class="fas fa-laptop"></i><h3>Advance Computer Course</h3><p>ADCA, DCA</p></div>
+      <div class="card"><i class="fas fa-book"></i><h3>School Level Computer Course</h3><p>SLCC</p></div>
+      <div class="card"><i class="fas fa-bookmark"></i><h3>Computer Hardware Course</h3><p>ADHM, DHM</p></div>
+      <div class="card"><i class="fas fa-star"></i><h3>Post Graduation Diploma in Computer Application</h3><p>PGDCA</p></div>
+      <div class="card"><i class="fas fa-desktop"></i><h3>Diploma in Master Computer Application</h3><p>DMCA</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= STUDENTS ZONE ========================= -->
+<section id="studentzone" class="section">
+  <div class="container">
+    <div class="section-title">👩‍🎓 Students Zone</div>
+    <div class="card-grid">
+      <div class="card"><i class="fas fa-id-card"></i><h3>Check Registration</h3><button class="btn checkRegBtn2">Verify Admission</button></div>
+      <div class="card"><i class="fas fa-graduation-cap"></i><h3>Scholarship Exam</h3><button class="btn scholarshipBtn2">Attempt Quiz</button></div>
+      <div class="card"><i class="fas fa-trophy"></i><h3>Winner's Gallery</h3><button class="btn winnerBtn2">See Winners</button></div>
+    </div>
+    <div id="studentDynamicContent" style="margin-top: 30px; background: rgba(255,245,225,0.7); border-radius: 30px; padding: 20px; backdrop-filter: blur(2px);">
+      <p style="text-align:center;">✨ Click any option above to access service ✨</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= NEWS & EVENT SECTION ========================= -->
+<section id="news" class="section">
+  <div class="container">
+    <div class="section-title">📰 Latest News & Events</div>
+    <div class="news-grid">
+      <div class="news-card"><h3><i class="fas fa-calendar-alt"></i> 2026</h3><p>New batch for Web Development starts from 1st May. Limited seats. Register now!</p></div>
+      <div class="news-card"><h3><i class="fas fa-trophy"></i> 2026</h3><p>Annual Typing Competition winners announced. Congratulations to all participants!</p></div>
+      <div class="news-card"><h3><i class="fas fa-chalkboard-teacher"></i> 2026</h3><p>Free Workshop on Digital Marketing on 20th April. Register with centre office.</p></div>
+      <div class="news-card"><h3><i class="fas fa-graduation-cap"></i> 2026</h3><p>Scholarship Exam results published. Check Student Zone.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= CONTACT US ========================= -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-title">📞 Get In Touch</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+      <div style="background: rgba(255,245,225,0.9); border-radius: 28px; padding: 25px; flex:1; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+        <h3><i class="fas fa-map-marker-alt"></i> Office</h3>
+        <p>Padmamala, Chapra, Nadia, West Bengal - 741123.</p>
+        <p><i class="fas fa-phone-alt"></i> +91 7407663407</p>
+        <p><i class="fas fa-envelope"></i> padmamalajnnyctc@gmail.com</p>
+      </div>
+      <div style="background: rgba(255,245,225,0.9); border-radius: 28px; padding: 25px; flex:1; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+        <h3>Send Message</h3>
+        <form id="contactForm"><input type="text" placeholder="Name" required><input type="email" placeholder="Email"><textarea rows="3" placeholder="Message"></textarea><button type="submit" class="btn btn-orange">Send</button></form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Padmamala JNNYCTC | All rights Reserved | Designed with ❤️ for students</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com/share/1KP5MsRSHL/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://youtube.com/@mr.arghatech?si=78I9BSOXJlugA9Eh" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://wa.me/message/3I5OFJTOYJ7MN1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.jnnyctc.org/" target="_blank"><i class="fas fa-globe"></i></a>
+  </div>
+</footer>
+
+<script>
+  // ----------------------------- UPDATED STUDENT DATA WITH NEW FIELDS -----------------------------
+  const studentsData = [
+    {
+      regNo: "JN-WB43-0109",
+      name: "REHAN BISWAS",
+      fatherName: "ISMAIL BISWAS",
+      course: "SCHOOL LEVEL COURSE FOR CLASS -VI",
+      duration: "12 Months",
+      fees: "400/- Monthly",
+      photo: "84.jpg"
+    },
+    {
+      regNo: "JN-WB43-0110",
+      name: "BADSHA BISWAS",
+      fatherName: "SAHA ALOM BISWAS",
+      course: "COA",
+      duration: "6 Months",
+      fees: "3000/-",
+      photo: "110.jpg"
+    },
+    {
+      regNo: "JN-WB43-0111",
+      name: "SAKIL AHAMMED MONDAL",
+      fatherName: "NASIR UDDIN MONDAL",
+      course: "SCHOOL LEVEL COURSE FOR CLASS -VI",
+      duration: "12 Months",
+      fees: "400/- Monthly",
+      photo: "86.jpg"
+    },
+        {
+      regNo: "JN-WB43-0112",
+      name: "SAMIRUL SEKH",
+      fatherName: "SHUKURALI SEKH",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "112.jpg"
+    },
+            {
+      regNo: "JN-WB43-0114",
+      name: "RAJJAK MONDAL",
+      fatherName: "ABDUL ALIM MONDAL",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "0114.jpg"
+    },
+   {
+      regNo: "JN-WB43-0115",
+      name: "PANNA MONDAL",
+      fatherName: "NURUL AMIN MONDAL",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "115.jpg"
+    },
+       {
+      regNo: "JN-WB43-0116",
+      name: "SUFIKUL MONDAL",
+      fatherName: "ANOYER MONDAL",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "116.jpg"
+    },
+   {
+      regNo: "JN-WB43-0117",
+      name: "AKASH MALITA",
+      fatherName: "BAKUL MALITA",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "117.jpg"
+    },
+    {
+      regNo: "JN-WB43-0118",
+      name: "ASIF SEKH ",
+      fatherName: "ALAUDDIN SEKH",
+      course: "SCHOOL LEVEL COURSE FOR CLASS -VII",
+      duration: "12 Months",
+      fees: "400/- Monthly-",
+      photo: "97.jpg"
+    },
+ {
+      regNo: "JN-WB43-0119",
+      name: "RIAZUL JANNAT ",
+      fatherName: "ABDUL GOFUR MONDAL",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "119.jpg"
+    },
+  {
+      regNo: "JN-WB43-0120",
+      name: "GOURI HALDER",
+      fatherName: "KAJAL HALDER",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "120.jpg"
+    },
+ {
+      regNo: "JN-WB43-0121",
+      name: "ASHOK HALDER",
+      fatherName: "KAJAL HALDER",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "121.jpg"
+    },
+     {
+      regNo: "JN-WB43-0122",
+      name: "BAPAN HALDER",
+      fatherName: "BABLU HALDER",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "122.jpg"
+    },
+{
+      regNo: "JN-WB43-0123",
+      name: "SOMNATH BISWAS",
+      fatherName: "ARUN BISWAS",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "123.jpg"
+    },
+    {
+      regNo: "JN-WB43-0124",
+      name: "RAHIT MAHANTA",
+      fatherName: "RABIN MAHANTA",
+      course: "ADCA",
+      duration: "12 Months",
+      fees: "5500/-",
+      photo: "124.jpg"
+    },
+  {
+      regNo: "JN-WB43-0125",
+      name: "ROHIT MONDAL ",
+      fatherName: "ROBIUL MONDAL",
+      course: "SCHOOL LEVEL COURSE FOR CLASS -VI",
+      duration: "12 Months",
+      fees: "400/- Monthly",
+      photo: "95.jpg"
+    },
+  {
+      regNo: "JN-WB43-0126",
+      name: "SAHIT MONDAL ",
+      fatherName: "ASADUL MONDAL",
+      course: "SCHOOL LEVEL COURSE FOR CLASS -VI",
+      duration: "12 Months",
+      fees: "400/- Monthly-",
+      photo: "98.jpg"
+    },
+
+  ];
+
+  const winnersData = [
+    { category: "🎉 Center Event Winner 2025 🎉", name: "SAKIL AHAMMED MONDAL", photo: "9.png", marks: "has secured 1st position in the Independence Day", description: "15 August Quiz Competition 2025" },
+    { category: "🎉 Center Event Winner 2025 🎉", name: "REHAN BISWAS", photo: "10.png", marks: "has secured 2nd position in the Independence Day", description: "15 August Quiz Competition 2025" },
+    { category: "🎉 Center Event Winner 2025 🎉", name: "SOHANA KHATUN", photo: "11.png", marks: "has secured 2nd position in the Independence Day", description: "15 August Quiz Competition 2025" },
+    { category: "🎉 Center Event Winner 2025 🎉", name: "SUDIP HALDAR", photo: "12.png", marks: "has secured 3rd position in the Independence Day", description: "15 August Quiz Competition 2025" },
+    { category: "🎉 Center Event Winner 2025 🎉", name: "JYOTI HALDER", photo: "13.png", marks: "has secured 3rd position in the Independence Day", description: "15 August Quiz Competition 2025" }
+  ];
+
+  function findStudentByReg(reg) {
+    return studentsData.find(s => s.regNo.toLowerCase() === reg.toLowerCase().trim());
+  }
+
+  function showCheckRegistrationUI(containerId) {
+    const container = document.getElementById(containerId);
+    if(!container) return;
+    container.innerHTML = `
+      <div class="form-container">
+        <h3>🔍 Enter Registration Number</h3>
+        <input type="text" id="regInput" placeholder="e.g., JN-WB43-0109">
+        <button class="btn btn-orange" id="fetchDetailsBtn">Get Admission Details</button>
+        <div id="studentResult"></div>
+      </div>
+    `;
+    document.getElementById('fetchDetailsBtn')?.addEventListener('click', () => {
+      const reg = document.getElementById('regInput').value;
+      const student = findStudentByReg(reg);
+      const resultDiv = document.getElementById('studentResult');
+      if(student) {
+        resultDiv.innerHTML = `
+          <div style="background:#fff4e6; border-radius:24px; padding:20px; margin-top:20px;">
+            <div style="text-align:center;">
+              <img src="${student.photo}" class="passport-photo" alt="Student Photo">
+            </div>
+            <div class="info-row"><strong>Reg No :</strong> ${student.regNo}</div>
+            <div class="info-row"><strong>Name :</strong> ${student.name}</div>
+            <div class="info-row"><strong>Father Name :</strong> ${student.fatherName}</div>
+            <div class="info-row"><strong>Course :</strong> ${student.course}</div>
+            <div class="info-row"><strong>Duration :</strong> ${student.duration}</div>
+            <div class="info-row"><strong>Fees :</strong> ${student.fees}</div>
+          </div>
+        `;
+      } else {
+        resultDiv.innerHTML = `<div class="error">❌ Registration Number Not Found! Please contact centre.</div>`;
+      }
+    });
+  }
+
+  function showScholarshipExamUI(containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = `
+      <div class="form-container">
+        <h3>📝 Scholarship Eligibility Test (3 Questions)</h3>
+        <form id="quizForm">
+          <p><strong>1. What does CPU stand for?</strong><br>
+          <label><input type="radio" name="q1" value="a"> Central Processing Unit</label><br>
+          <label><input type="radio" name="q1" value="b"> Computer Personal Unit</label></p>
+          <p><strong>2. Which one is an output device?</strong><br>
+          <label><input type="radio" name="q2" value="a"> Keyboard</label><br>
+          <label><input type="radio" name="q2" value="b"> Monitor</label></p>
+          <p><strong>3. Father of Computer?</strong><br>
+          <label><input type="radio" name="q3" value="a"> Charles Babbage</label><br>
+          <label><input type="radio" name="q3" value="b"> Alan Turing</label></p>
+          <button type="submit" class="btn">Submit Exam</button>
+        </form>
+        <div id="examResult"></div>
+      </div>
+    `;
+    const quizForm = document.getElementById('quizForm');
+    quizForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const q1 = document.querySelector('input[name="q1"]:checked')?.value;
+      const q2 = document.querySelector('input[name="q2"]:checked')?.value;
+      const q3 = document.querySelector('input[name="q3"]:checked')?.value;
+      let score = 0;
+      if(q1 === 'a') score++;
+      if(q2 === 'b') score++;
+      if(q3 === 'a') score++;
+      const resultDiv = document.getElementById('examResult');
+      if(score >= 2) resultDiv.innerHTML = `<div style="background:#d4edda; padding:15px; border-radius:30px;">🎉 Congratulations! You scored ${score}/3. You are eligible for 50% Scholarship!</div>`;
+      else resultDiv.innerHTML = `<div class="error">😞 Score ${score}/3. Try again next month for scholarship.</div>`;
+    });
+  }
+
+  // Champions Slider Functions
+  let champIndex = 0;
+  let champSlidesContainer = null;
+  let totalChamps = winnersData.length;
+
+  function buildChampionSlides() {
+    const container = document.getElementById('champSlides');
+    if(!container) return;
+    container.innerHTML = winnersData.map(w => `
+      <div class="champ-slide">
+        <img src="${w.photo}" alt="${w.name}" onerror="this.src='https://via.placeholder.com/160?text=Winner'">
+        <h3>${w.category}</h3>
+        <p><strong>${w.name}</strong></p>
+        <p>🏅 ${w.marks}</p>
+        <p style="font-size:0.85rem;">${w.description}</p>
+      </div>
+    `).join('');
+    champSlidesContainer = container;
+    updateChampSlider();
+  }
+
+  function updateChampSlider() {
+    if(champSlidesContainer) {
+      champSlidesContainer.style.transform = `translateX(-${champIndex * 100}%)`;
+    }
+  }
+
+  function nextChamp() {
+    champIndex = (champIndex + 1) % totalChamps;
+    updateChampSlider();
+  }
+  function prevChamp() {
+    champIndex = (champIndex - 1 + totalChamps) % totalChamps;
+    updateChampSlider();
+  }
+
+  // Winner gallery for Student Zone
+  function showWinnersUI(containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = `
+      <div style="text-align:center;"><h2>🏆 Our Champions 🏆</h2></div>
+      <div class="winner-grid">
+        ${winnersData.map(w => `
+          <div class="winner-card">
+            <img src="${w.photo}" alt="winner">
+            <h4>${w.category}</h4>
+            <p>${w.name}</p>
+            <p>🏅 ${w.marks}</p>
+            <p>${w.description}</p>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  // -------- Main Slider --------
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('#slides .slide');
+  const slidesContainer = document.getElementById('slides');
+  const totalSlides = slides.length;
+  function updateMainSlider() {
+    if(slidesContainer) slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+  function nextMain() { slideIndex = (slideIndex + 1) % totalSlides; updateMainSlider(); }
+  function prevMain() { slideIndex = (slideIndex - 1 + totalSlides) % totalSlides; updateMainSlider(); }
+  document.querySelector('.next')?.addEventListener('click', nextMain);
+  document.querySelector('.prev')?.addEventListener('click', prevMain);
+  setInterval(nextMain, 4000);
+
+  // -------- Achievement Slider --------
+  let achievIndex = 0;
+  const achievSlides = document.querySelectorAll('#achievementSlides .slide');
+  const achievContainer = document.getElementById('achievementSlides');
+  const totalAchiev = achievSlides.length;
+  function updateAchievSlider() {
+    if(achievContainer) achievContainer.style.transform = `translateX(-${achievIndex * 100}%)`;
+  }
+  function nextAchiev() { achievIndex = (achievIndex + 1) % totalAchiev; updateAchievSlider(); }
+  function prevAchiev() { achievIndex = (achievIndex - 1 + totalAchiev) % totalAchiev; updateAchievSlider(); }
+  document.querySelector('.nextAchiev')?.addEventListener('click', nextAchiev);
+  document.querySelector('.prevAchiev')?.addEventListener('click', prevAchiev);
+  setInterval(nextAchiev, 5000);
+
+  // -------- Tab Switching --------
+  const tabs = document.querySelectorAll('.tab-btn');
+  const sections = document.querySelectorAll('.section');
+  function switchTab(tabId) {
+    sections.forEach(sec => sec.classList.remove('active-section'));
+    document.getElementById(tabId).classList.add('active-section');
+    tabs.forEach(btn => {
+      if(btn.getAttribute('data-tab') === tabId) btn.classList.add('active');
+      else btn.classList.remove('active');
+    });
+  }
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const tabId = btn.getAttribute('data-tab');
+      switchTab(tabId);
+      if(tabId === 'about') { /* winners removed */ }
+      if(tabId !== 'studentzone') return;
+      const dynContent = document.getElementById('studentDynamicContent');
+      if(dynContent) dynContent.innerHTML = `<p style="text-align:center;">✨ Click any option above to access service ✨</p>`;
+    });
+  });
+
+  // ---------- Event Listeners ----------
+  function setupEventDelegation() {
+    document.querySelectorAll('.checkRegBtn, .checkRegBtn2').forEach(btn => {
+      btn.addEventListener('click', () => {
+        switchTab('studentzone');
+        showCheckRegistrationUI('studentDynamicContent');
+      });
+    });
+    document.querySelectorAll('.scholarshipBtn, .scholarshipBtn2').forEach(btn => {
+      btn.addEventListener('click', () => {
+        switchTab('studentzone');
+        showScholarshipExamUI('studentDynamicContent');
+      });
+    });
+    document.querySelectorAll('.winnerBtn, .winnerBtn2').forEach(btn => {
+      btn.addEventListener('click', () => {
+        switchTab('studentzone');
+        showWinnersUI('studentDynamicContent');
+      });
+    });
+    const contactForm = document.getElementById('contactForm');
+    if(contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert("✅ Your message has been sent! We'll contact you soon.");
+        contactForm.reset();
+      });
+    }
+  }
+
+  // Initialize champions slider
+  buildChampionSlides();
+  document.querySelector('.champ-prev')?.addEventListener('click', prevChamp);
+  document.querySelector('.champ-next')?.addEventListener('click', nextChamp);
+  setInterval(nextChamp, 4000); // auto slide every 4 seconds
+
+  setupEventDelegation();
+  const dynDiv = document.getElementById('studentDynamicContent');
+  if(dynDiv) dynDiv.innerHTML = `<p style="text-align:center;">🎓 Choose a service: Check Registration, Scholarship Exam, or Winners 🏆</p>`;
+</script>
+</body>
+</html>
