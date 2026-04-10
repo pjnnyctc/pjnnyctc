@@ -24,7 +24,7 @@
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      padding: 15px 30px;
+      padding: 15px 20px;
       background: linear-gradient(115deg, #0000dd 0%, #270082 100%);
       border-bottom: 4px solid #d4ff00;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -32,11 +32,12 @@
     .logo-area {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
+      flex-wrap: wrap;
     }
     .logo-img {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #ffaa33;
@@ -45,6 +46,7 @@
     }
     .centre-name {
       text-align: left;
+      max-width: 500px;
     }
     .hero-title {
       background: linear-gradient(135deg, #ffffff, #eeff00, #ffffff, #f6ff00);
@@ -53,7 +55,7 @@
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       font-weight: 800;
       letter-spacing: 1px;
     }
@@ -63,17 +65,19 @@
       100% { background-position: 0% 50%; }
     }
     .sub-title {
-      font-size: 0.85rem;
+      font-size: 0.7rem;
       color: #ffffff;
       margin-top: 5px;
       font-weight: 500;
+      line-height: 1.3;
     }
     .helpline-badge {
       background: #ffaa33;
-      padding: 8px 20px;
+      padding: 6px 16px;
       border-radius: 40px;
       color: #000000;
       font-weight: bold;
+      font-size: 0.85rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     /* navigation */
@@ -93,13 +97,14 @@
     .nav-tabs button {
       background: transparent;
       border: none;
-      padding: 14px 24px;
-      font-size: 1rem;
+      padding: 12px 16px;
+      font-size: 0.85rem;
       font-weight: 600;
       color: #f0f0f0;
       cursor: pointer;
       transition: 0.3s;
       border-bottom: 3px solid transparent;
+      white-space: nowrap;
     }
     .nav-tabs button.active, .nav-tabs button:hover {
       background-color: #d4ff00;
@@ -109,7 +114,7 @@
     /* sections */
     .section {
       display: none;
-      padding: 40px 20px;
+      padding: 30px 15px;
       animation: fadeSlide 0.4s ease;
     }
     .section.active-section {
@@ -124,13 +129,13 @@
       margin: 0 auto;
     }
     .section-title {
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 700;
       color: #2b3b4e;
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       border-left: 8px solid #ffaa33;
-      padding-left: 20px;
+      padding-left: 15px;
       display: inline-block;
       width: auto;
       background: rgba(255,255,200,0.3);
@@ -164,7 +169,7 @@
       height: auto;
       display: block;
       object-fit: cover;
-      max-height: 600px;
+      max-height: 500px;
     }
     .prev, .next {
       position: absolute;
@@ -172,8 +177,8 @@
       transform: translateY(-50%);
       background: rgba(0,0,0,0.6);
       color: #ffaa33;
-      font-size: 28px;
-      padding: 10px 15px;
+      font-size: 22px;
+      padding: 8px 12px;
       cursor: pointer;
       border-radius: 50%;
       user-select: none;
@@ -181,13 +186,13 @@
       z-index: 10;
     }
     .prev:hover, .next:hover { background: #ffaa33; color: #1f2e3c; }
-    .prev { left: 15px; }
-    .next { right: 15px; }
+    .prev { left: 10px; }
+    .next { right: 10px; }
     /* cards */
     .card-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 25px;
+      gap: 20px;
       justify-content: center;
       margin-top: 30px;
     }
@@ -195,7 +200,8 @@
       background: linear-gradient(135deg, #ffffffdd, #fff5e6);
       backdrop-filter: blur(2px);
       border-radius: 24px;
-      width: 280px;
+      width: 100%;
+      max-width: 280px;
       padding: 20px;
       text-align: center;
       box-shadow: 0 12px 25px rgba(0,0,0,0.15);
@@ -203,14 +209,14 @@
       border-bottom: 5px solid #ffaa33;
     }
     .card i {
-      font-size: 48px;
+      font-size: 42px;
       color: #ff0000;
     }
     .btn {
       background: #eeff00;
       color: rgb(0, 0, 0);
       border: none;
-      padding: 8px 20px;
+      padding: 8px 18px;
       border-radius: 40px;
       font-weight: 600;
       cursor: pointer;
@@ -224,40 +230,42 @@
     }
     .form-container {
       background: rgba(255,250,235,0.95);
-      padding: 30px;
+      padding: 20px;
       border-radius: 28px;
-      max-width: 550px;
+      max-width: 500px;
       margin: 20px auto;
       box-shadow: 0 15px 30px rgba(0,0,0,0.2);
       border: 1px solid #ffcc88;
     }
     input, select {
       width: 100%;
-      padding: 12px;
-      margin: 10px 0;
+      padding: 10px 14px;
+      margin: 8px 0;
       border-radius: 60px;
       border: 1px solid #ffb366;
       background: #fffef7;
+      font-size: 0.9rem;
     }
     .winner-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 25px;
       justify-content: center;
     }
     .winner-card {
       background: linear-gradient(145deg, #fff8f0, #ffe8d4);
       border-radius: 30px;
       padding: 20px;
-      width: 280px;
+      width: 100%;
+      max-width: 280px;
       text-align: center;
       box-shadow: 0 15px 25px rgba(0,0,0,0.15);
       transition: transform 0.3s;
       border-top: 6px solid #ffaa33;
     }
     .winner-card img {
-      width: 130px;
-      height: 130px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #ffaa33;
@@ -268,6 +276,10 @@
       border-bottom: 1px dashed #ffaa66;
       padding: 8px 0;
       flex-wrap: wrap;
+      gap: 8px;
+    }
+    .info-row strong {
+      min-width: 120px;
     }
     .error {
       color: #c0392b;
@@ -279,14 +291,15 @@
     .review-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 25px;
       justify-content: center;
       margin-top: 30px;
     }
     .review-card {
       background: white;
       border-radius: 28px;
-      width: 320px;
+      width: 100%;
+      max-width: 320px;
       padding: 20px;
       box-shadow: 0 15px 25px rgba(0,0,0,0.1);
       transition: transform 0.3s, box-shadow 0.3s;
@@ -329,7 +342,8 @@
     .news-card {
       background: rgba(255,250,235,0.95);
       border-radius: 28px;
-      width: 350px;
+      width: 100%;
+      max-width: 350px;
       padding: 20px;
       border-left: 8px solid #ffaa33;
       transition: 0.3s;
@@ -341,8 +355,9 @@
     .social-links {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 20px;
       margin-top: 20px;
+      flex-wrap: wrap;
     }
     .social-links a {
       color: #eeff00;
@@ -357,19 +372,20 @@
       background: #0400ff;
       color: #eeff00;
       text-align: center;
-      padding: 25px;
+      padding: 25px 15px;
       margin-top: 40px;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
     .image-note {
       background: #ffffff;
       color: #000000;
-      padding: 5px;
+      padding: 10px;
       text-align: center;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       border-radius: 30px;
-      margin: 10px auto;
-      width: fit-content;
+      margin: 20px auto;
+      width: 95%;
+      line-height: 1.4;
     }
     /* Passport photo style for student registration */
     .passport-photo {
@@ -385,6 +401,7 @@
     /* Champions Slider (single slide carousel) */
     .champions-slider {
       position: relative;
+      width: 95%;
       max-width: 800px;
       margin: 30px auto;
       background: rgba(255,250,235,0.9);
@@ -402,8 +419,8 @@
       text-align: center;
     }
     .champ-slide img {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       border: 5px solid #ffaa33;
@@ -412,9 +429,10 @@
     .champ-slide h3 {
       color: #ff0000;
       margin: 10px 0;
+      font-size: 1.2rem;
     }
     .champ-slide p {
-      font-size: 1rem;
+      font-size: 0.9rem;
       margin: 5px 0;
     }
     .champ-prev, .champ-next {
@@ -423,31 +441,72 @@
       transform: translateY(-50%);
       background: rgba(0,0,0,0.6);
       color: #ffaa33;
-      font-size: 24px;
-      padding: 8px 14px;
+      font-size: 20px;
+      padding: 6px 12px;
       cursor: pointer;
       border-radius: 50%;
       z-index: 10;
     }
-    .champ-prev { left: 10px; }
-    .champ-next { right: 10px; }
+    .champ-prev { left: 5px; }
+    .champ-next { right: 5px; }
     .champ-prev:hover, .champ-next:hover {
       background: #ffaa33;
       color: #000;
     }
     @media (max-width: 700px) {
-      .centre-header { flex-direction: column; text-align: center; gap: 15px; }
-      .logo-area { justify-content: center; }
-      .hero-title { font-size: 1.4rem; text-align: center; }
-      .slide img { max-height: 300px; }
-      .section-title { font-size: 1.5rem; }
+      .centre-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 12px;
+      }
+      .logo-area {
+        justify-content: center;
+      }
+      .hero-title {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      .sub-title {
+        font-size: 0.65rem;
+      }
+      .nav-tabs button {
+        padding: 8px 12px;
+        font-size: 0.7rem;
+        white-space: nowrap;
+      }
+      .section-title {
+        font-size: 1.3rem;
+        padding-left: 10px;
+      }
+      .slide img {
+        max-height: 250px;
+      }
+      .prev, .next {
+        font-size: 18px;
+        padding: 5px 10px;
+      }
       .passport-photo {
         width: 90px;
         height: 105px;
       }
       .champ-slide img {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
+      }
+      .champ-slide h3 {
+        font-size: 1rem;
+      }
+      .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .info-row strong {
+        min-width: auto;
+      }
+      .btn {
+        padding: 6px 16px;
+        font-size: 0.85rem;
       }
     }
   </style>
@@ -507,13 +566,11 @@
     </div>
   </div>
 
-  <!-- OUR CHAMPIONS SLIDER (MOVED TO HOME) -->
+  <!-- OUR CHAMPIONS SLIDER -->
   <div style="margin: 50px 0 30px;">
     <h2 class="section-title" style="display: block; text-align: center; border-left: none;">🏆 Our Champions 🏆</h2>
     <div class="champions-slider">
-      <div class="champ-slides" id="champSlides">
-        <!-- winners will be injected dynamically -->
-      </div>
+      <div class="champ-slides" id="champSlides"></div>
       <a class="champ-prev">❮</a>
       <a class="champ-next">❯</a>
     </div>
@@ -558,7 +615,7 @@
 <section id="about" class="section">
   <div class="container">
     <div class="section-title">Padmamala Jawaharlal Nehru National Youth Computer Training Centre</div>
-    <div style="background: rgba(255,245,225,0.9); border-radius: 30px; padding: 30px; text-align: center; backdrop-filter: blur(2px);">
+    <div style="background: rgba(255,245,225,0.9); border-radius: 30px; padding: 25px; text-align: center;">
       <p>An Authorized Training Centre of "JNNYCTC" is an autonomous organization registered under the Indian public trust act. A unit of 'National Council of Educational Foundation' (Unique ID.- IV-1903-02385/17) and  N.CT. New Delhi Govt. of India. And the trust is also certified by  ISO 9001 : 2015 org (Certificate No.-IN95882A). The institute certificate is also registered under C.R.,Ministry of Human Resource Development Govt. of  India. And  Affiliated member of Planning Commission Govt. of India. The organization also certified by Department of Labour, Government of National Capital Territory of Delhi (Certificate No.- IN-DL79720045260935P)</p>
       <p><strong>🏅 ISO Certified | 🎓 Govt. Recognized | 💼 Job Oriented Course</strong></p>
     </div>
@@ -594,7 +651,7 @@
       <div class="card"><i class="fas fa-graduation-cap"></i><h3>Scholarship Exam</h3><button class="btn scholarshipBtn2">Attempt Quiz</button></div>
       <div class="card"><i class="fas fa-trophy"></i><h3>Winner's Gallery</h3><button class="btn winnerBtn2">See Winners</button></div>
     </div>
-    <div id="studentDynamicContent" style="margin-top: 30px; background: rgba(255,245,225,0.7); border-radius: 30px; padding: 20px; backdrop-filter: blur(2px);">
+    <div id="studentDynamicContent" style="margin-top: 30px; background: rgba(255,245,225,0.7); border-radius: 30px; padding: 20px;">
       <p style="text-align:center;">✨ Click any option above to access service ✨</p>
     </div>
   </div>
@@ -617,16 +674,16 @@
 <section id="contact" class="section">
   <div class="container">
     <div class="section-title">📞 Get In Touch</div>
-    <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
-      <div style="background: rgba(255,245,225,0.9); border-radius: 28px; padding: 25px; flex:1; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+    <div style="display: flex; flex-wrap: wrap; gap: 25px; justify-content: center;">
+      <div style="background: rgba(255,245,225,0.9); border-radius: 28px; padding: 20px; flex:1; min-width: 250px;">
         <h3><i class="fas fa-map-marker-alt"></i> Office</h3>
         <p>Padmamala, Chapra, Nadia, West Bengal - 741123.</p>
         <p><i class="fas fa-phone-alt"></i> +91 7407663407</p>
         <p><i class="fas fa-envelope"></i> padmamalajnnyctc@gmail.com</p>
       </div>
-      <div style="background: rgba(255,245,225,0.9); border-radius: 28px; padding: 25px; flex:1; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+      <div style="background: rgba(255,245,225,0.9); border-radius: 28px; padding: 20px; flex:1; min-width: 250px;">
         <h3>Send Message</h3>
-        <form id="contactForm"><input type="text" placeholder="Name" required><input type="email" placeholder="Email"><textarea rows="3" placeholder="Message"></textarea><button type="submit" class="btn btn-orange">Send</button></form>
+        <form id="contactForm"><input type="text" placeholder="Name" required><input type="email" placeholder="Email"><textarea rows="3" placeholder="Message" style="border-radius: 20px;"></textarea><button type="submit" class="btn btn-orange">Send</button></form>
       </div>
     </div>
   </div>
@@ -643,162 +700,25 @@
 </footer>
 
 <script>
-  // ----------------------------- UPDATED STUDENT DATA WITH NEW FIELDS -----------------------------
+  // ----------------------------- STUDENT DATA -----------------------------
   const studentsData = [
-    {
-      regNo: "JN-WB43-0109",
-      name: "REHAN BISWAS",
-      fatherName: "ISMAIL BISWAS",
-      course: "SCHOOL LEVEL COURSE FOR CLASS -VI",
-      duration: "12 Months",
-      fees: "400/- Monthly",
-      photo: "84.jpg"
-    },
-    {
-      regNo: "JN-WB43-0110",
-      name: "BADSHA BISWAS",
-      fatherName: "SAHA ALOM BISWAS",
-      course: "COA",
-      duration: "6 Months",
-      fees: "3000/-",
-      photo: "110.jpg"
-    },
-    {
-      regNo: "JN-WB43-0111",
-      name: "SAKIL AHAMMED MONDAL",
-      fatherName: "NASIR UDDIN MONDAL",
-      course: "SCHOOL LEVEL COURSE FOR CLASS -VI",
-      duration: "12 Months",
-      fees: "400/- Monthly",
-      photo: "86.jpg"
-    },
-        {
-      regNo: "JN-WB43-0112",
-      name: "SAMIRUL SEKH",
-      fatherName: "SHUKURALI SEKH",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "112.jpg"
-    },
-            {
-      regNo: "JN-WB43-0114",
-      name: "RAJJAK MONDAL",
-      fatherName: "ABDUL ALIM MONDAL",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "0114.jpg"
-    },
-   {
-      regNo: "JN-WB43-0115",
-      name: "PANNA MONDAL",
-      fatherName: "NURUL AMIN MONDAL",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "115.jpg"
-    },
-       {
-      regNo: "JN-WB43-0116",
-      name: "SUFIKUL MONDAL",
-      fatherName: "ANOYER MONDAL",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "116.jpg"
-    },
-   {
-      regNo: "JN-WB43-0117",
-      name: "AKASH MALITA",
-      fatherName: "BAKUL MALITA",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "117.jpg"
-    },
-    {
-      regNo: "JN-WB43-0118",
-      name: "ASIF SEKH ",
-      fatherName: "ALAUDDIN SEKH",
-      course: "SCHOOL LEVEL COURSE FOR CLASS -VII",
-      duration: "12 Months",
-      fees: "400/- Monthly-",
-      photo: "97.jpg"
-    },
- {
-      regNo: "JN-WB43-0119",
-      name: "RIAZUL JANNAT ",
-      fatherName: "ABDUL GOFUR MONDAL",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "119.jpg"
-    },
-  {
-      regNo: "JN-WB43-0120",
-      name: "GOURI HALDER",
-      fatherName: "KAJAL HALDER",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "120.jpg"
-    },
- {
-      regNo: "JN-WB43-0121",
-      name: "ASHOK HALDER",
-      fatherName: "KAJAL HALDER",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "121.jpg"
-    },
-     {
-      regNo: "JN-WB43-0122",
-      name: "BAPAN HALDER",
-      fatherName: "BABLU HALDER",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "122.jpg"
-    },
-{
-      regNo: "JN-WB43-0123",
-      name: "SOMNATH BISWAS",
-      fatherName: "ARUN BISWAS",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "123.jpg"
-    },
-    {
-      regNo: "JN-WB43-0124",
-      name: "RAHIT MAHANTA",
-      fatherName: "RABIN MAHANTA",
-      course: "ADCA",
-      duration: "12 Months",
-      fees: "5500/-",
-      photo: "124.jpg"
-    },
-  {
-      regNo: "JN-WB43-0125",
-      name: "ROHIT MONDAL ",
-      fatherName: "ROBIUL MONDAL",
-      course: "SCHOOL LEVEL COURSE FOR CLASS -VI",
-      duration: "12 Months",
-      fees: "400/- Monthly",
-      photo: "95.jpg"
-    },
-  {
-      regNo: "JN-WB43-0126",
-      name: "SAHIT MONDAL ",
-      fatherName: "ASADUL MONDAL",
-      course: "SCHOOL LEVEL COURSE FOR CLASS -VI",
-      duration: "12 Months",
-      fees: "400/- Monthly-",
-      photo: "98.jpg"
-    },
-
+    { regNo: "JN-WB43-0109", name: "REHAN BISWAS", fatherName: "ISMAIL BISWAS", course: "SCHOOL LEVEL COURSE FOR CLASS -VI", duration: "12 Months", fees: "400/- Monthly", photo: "84.jpg" },
+    { regNo: "JN-WB43-0110", name: "BADSHA BISWAS", fatherName: "SAHA ALOM BISWAS", course: "COA", duration: "6 Months", fees: "3000/-", photo: "110.jpg" },
+    { regNo: "JN-WB43-0111", name: "SAKIL AHAMMED MONDAL", fatherName: "NASIR UDDIN MONDAL", course: "SCHOOL LEVEL COURSE FOR CLASS -VI", duration: "12 Months", fees: "400/- Monthly", photo: "86.jpg" },
+    { regNo: "JN-WB43-0112", name: "SAMIRUL SEKH", fatherName: "SHUKURALI SEKH", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "112.jpg" },
+    { regNo: "JN-WB43-0114", name: "RAJJAK MONDAL", fatherName: "ABDUL ALIM MONDAL", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "0114.jpg" },
+    { regNo: "JN-WB43-0115", name: "PANNA MONDAL", fatherName: "NURUL AMIN MONDAL", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "115.jpg" },
+    { regNo: "JN-WB43-0116", name: "SUFIKUL MONDAL", fatherName: "ANOYER MONDAL", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "116.jpg" },
+    { regNo: "JN-WB43-0117", name: "AKASH MALITA", fatherName: "BAKUL MALITA", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "117.jpg" },
+    { regNo: "JN-WB43-0118", name: "ASIF SEKH", fatherName: "ALAUDDIN SEKH", course: "SCHOOL LEVEL COURSE FOR CLASS -VII", duration: "12 Months", fees: "400/- Monthly-", photo: "97.jpg" },
+    { regNo: "JN-WB43-0119", name: "RIAZUL JANNAT", fatherName: "ABDUL GOFUR MONDAL", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "119.jpg" },
+    { regNo: "JN-WB43-0120", name: "GOURI HALDER", fatherName: "KAJAL HALDER", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "120.jpg" },
+    { regNo: "JN-WB43-0121", name: "ASHOK HALDER", fatherName: "KAJAL HALDER", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "121.jpg" },
+    { regNo: "JN-WB43-0122", name: "BAPAN HALDER", fatherName: "BABLU HALDER", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "122.jpg" },
+    { regNo: "JN-WB43-0123", name: "SOMNATH BISWAS", fatherName: "ARUN BISWAS", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "123.jpg" },
+    { regNo: "JN-WB43-0124", name: "RAHIT MAHANTA", fatherName: "RABIN MAHANTA", course: "ADCA", duration: "12 Months", fees: "5500/-", photo: "124.jpg" },
+    { regNo: "JN-WB43-0125", name: "ROHIT MONDAL", fatherName: "ROBIUL MONDAL", course: "SCHOOL LEVEL COURSE FOR CLASS -VI", duration: "12 Months", fees: "400/- Monthly", photo: "95.jpg" },
+    { regNo: "JN-WB43-0126", name: "SAHIT MONDAL", fatherName: "ASADUL MONDAL", course: "SCHOOL LEVEL COURSE FOR CLASS -VI", duration: "12 Months", fees: "400/- Monthly-", photo: "98.jpg" }
   ];
 
   const winnersData = [
@@ -832,7 +752,7 @@
         resultDiv.innerHTML = `
           <div style="background:#fff4e6; border-radius:24px; padding:20px; margin-top:20px;">
             <div style="text-align:center;">
-              <img src="${student.photo}" class="passport-photo" alt="Student Photo">
+              <img src="${student.photo}" class="passport-photo" alt="Student Photo" onerror="this.src='https://via.placeholder.com/113x132?text=Photo'">
             </div>
             <div class="info-row"><strong>Reg No :</strong> ${student.regNo}</div>
             <div class="info-row"><strong>Name :</strong> ${student.name}</div>
@@ -894,7 +814,7 @@
     if(!container) return;
     container.innerHTML = winnersData.map(w => `
       <div class="champ-slide">
-        <img src="${w.photo}" alt="${w.name}" onerror="this.src='https://via.placeholder.com/160?text=Winner'">
+        <img src="${w.photo}" alt="${w.name}" onerror="this.src='https://via.placeholder.com/140?text=Winner'">
         <h3>${w.category}</h3>
         <p><strong>${w.name}</strong></p>
         <p>🏅 ${w.marks}</p>
@@ -911,16 +831,9 @@
     }
   }
 
-  function nextChamp() {
-    champIndex = (champIndex + 1) % totalChamps;
-    updateChampSlider();
-  }
-  function prevChamp() {
-    champIndex = (champIndex - 1 + totalChamps) % totalChamps;
-    updateChampSlider();
-  }
+  function nextChamp() { champIndex = (champIndex + 1) % totalChamps; updateChampSlider(); }
+  function prevChamp() { champIndex = (champIndex - 1 + totalChamps) % totalChamps; updateChampSlider(); }
 
-  // Winner gallery for Student Zone
   function showWinnersUI(containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = `
@@ -939,35 +852,31 @@
     `;
   }
 
-  // -------- Main Slider --------
+  // Main Slider
   let slideIndex = 0;
   const slides = document.querySelectorAll('#slides .slide');
   const slidesContainer = document.getElementById('slides');
   const totalSlides = slides.length;
-  function updateMainSlider() {
-    if(slidesContainer) slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
-  }
+  function updateMainSlider() { if(slidesContainer) slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`; }
   function nextMain() { slideIndex = (slideIndex + 1) % totalSlides; updateMainSlider(); }
   function prevMain() { slideIndex = (slideIndex - 1 + totalSlides) % totalSlides; updateMainSlider(); }
   document.querySelector('.next')?.addEventListener('click', nextMain);
   document.querySelector('.prev')?.addEventListener('click', prevMain);
   setInterval(nextMain, 4000);
 
-  // -------- Achievement Slider --------
+  // Achievement Slider
   let achievIndex = 0;
   const achievSlides = document.querySelectorAll('#achievementSlides .slide');
   const achievContainer = document.getElementById('achievementSlides');
   const totalAchiev = achievSlides.length;
-  function updateAchievSlider() {
-    if(achievContainer) achievContainer.style.transform = `translateX(-${achievIndex * 100}%)`;
-  }
+  function updateAchievSlider() { if(achievContainer) achievContainer.style.transform = `translateX(-${achievIndex * 100}%)`; }
   function nextAchiev() { achievIndex = (achievIndex + 1) % totalAchiev; updateAchievSlider(); }
   function prevAchiev() { achievIndex = (achievIndex - 1 + totalAchiev) % totalAchiev; updateAchievSlider(); }
   document.querySelector('.nextAchiev')?.addEventListener('click', nextAchiev);
   document.querySelector('.prevAchiev')?.addEventListener('click', prevAchiev);
   setInterval(nextAchiev, 5000);
 
-  // -------- Tab Switching --------
+  // Tab Switching
   const tabs = document.querySelectorAll('.tab-btn');
   const sections = document.querySelectorAll('.section');
   function switchTab(tabId) {
@@ -982,32 +891,22 @@
     btn.addEventListener('click', () => {
       const tabId = btn.getAttribute('data-tab');
       switchTab(tabId);
-      if(tabId === 'about') { /* winners removed */ }
       if(tabId !== 'studentzone') return;
       const dynContent = document.getElementById('studentDynamicContent');
       if(dynContent) dynContent.innerHTML = `<p style="text-align:center;">✨ Click any option above to access service ✨</p>`;
     });
   });
 
-  // ---------- Event Listeners ----------
+  // Event Listeners
   function setupEventDelegation() {
     document.querySelectorAll('.checkRegBtn, .checkRegBtn2').forEach(btn => {
-      btn.addEventListener('click', () => {
-        switchTab('studentzone');
-        showCheckRegistrationUI('studentDynamicContent');
-      });
+      btn.addEventListener('click', () => { switchTab('studentzone'); showCheckRegistrationUI('studentDynamicContent'); });
     });
     document.querySelectorAll('.scholarshipBtn, .scholarshipBtn2').forEach(btn => {
-      btn.addEventListener('click', () => {
-        switchTab('studentzone');
-        showScholarshipExamUI('studentDynamicContent');
-      });
+      btn.addEventListener('click', () => { switchTab('studentzone'); showScholarshipExamUI('studentDynamicContent'); });
     });
     document.querySelectorAll('.winnerBtn, .winnerBtn2').forEach(btn => {
-      btn.addEventListener('click', () => {
-        switchTab('studentzone');
-        showWinnersUI('studentDynamicContent');
-      });
+      btn.addEventListener('click', () => { switchTab('studentzone'); showWinnersUI('studentDynamicContent'); });
     });
     const contactForm = document.getElementById('contactForm');
     if(contactForm) {
@@ -1019,12 +918,10 @@
     }
   }
 
-  // Initialize champions slider
   buildChampionSlides();
   document.querySelector('.champ-prev')?.addEventListener('click', prevChamp);
   document.querySelector('.champ-next')?.addEventListener('click', nextChamp);
-  setInterval(nextChamp, 4000); // auto slide every 4 seconds
-
+  setInterval(nextChamp, 4000);
   setupEventDelegation();
   const dynDiv = document.getElementById('studentDynamicContent');
   if(dynDiv) dynDiv.innerHTML = `<p style="text-align:center;">🎓 Choose a service: Check Registration, Scholarship Exam, or Winners 🏆</p>`;
