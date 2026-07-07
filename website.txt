@@ -1,0 +1,7 @@
+pjnnyctc.netlify.app
+
+GitHub push webupdate:
+git add .
+git commit -m "2nd commit"
+git push
+git status
